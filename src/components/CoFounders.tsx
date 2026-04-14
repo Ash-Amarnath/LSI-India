@@ -31,7 +31,7 @@ const CoFounders = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            The People Behind LSI
+            The People Behind LSI India
           </h2>
           <p className="text-muted-foreground text-lg">Student-led. Ground-driven. Purpose-built.</p>
         </motion.div>
