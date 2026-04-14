@@ -8,7 +8,7 @@ const stages = [
     stage: "Stage 1",
     title: "Laying the Foundation",
     status: "active" as const,
-    period: "NOW",
+    period: "2026",
     emoji: "🏗️",
     details: [
       "Recruiting initial volunteer network (target: 500 across 10 states)",
@@ -22,7 +22,7 @@ const stages = [
     stage: "Stage 2",
     title: "First Mapping Wave",
     status: "upcoming" as const,
-    period: "Q3 2025",
+    period: "Q3 2026",
     emoji: "🗺️",
     details: [
       "1,000+ villages documented",
@@ -35,7 +35,7 @@ const stages = [
     stage: "Stage 3",
     title: "National Coverage",
     status: "future" as const,
-    period: "2026",
+    period: "2027",
     emoji: "🇮🇳",
     details: [
       "Expand to 20+ states",
@@ -48,7 +48,7 @@ const stages = [
     stage: "Stage 4",
     title: "Institutional Impact",
     status: "future" as const,
-    period: "2027+",
+    period: "2028+",
     emoji: "🏛️",
     details: [
       "Government data cites LSI findings",
