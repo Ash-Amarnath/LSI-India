@@ -11,11 +11,12 @@ const founders = [
     links: { linkedin: "#", instagram: "#", email: "mailto:founder1@lsi.org" },
   },
   {
-    name: "Co-Founder Name",
-    role: "Co-Founder & Operations Lead",
-    bio: "A data enthusiast and community builder who brings LSI's ground-level operations to life. Manages volunteer networks, survey design, and state-level coordination. Believes in the power of students as agents of systemic change.",
-    quote: "Data without action is just noise.",
-    links: { linkedin: "#", instagram: "#", email: "mailto:founder2@lsi.org" },
+    name: "Amarnath (Ash)",
+    role: "Co-Founder",
+    bio: "An interdisciplinary researcher, a Young India Fellow, and an Erasmus Mundus scholar. Growing up in rural Tamil Nadu without access to basic living standards — clean water, reliable electricity, quality healthcare — I witnessed how invisibility perpetuates inequality. Now leading LSI Initiative to change that narrative through data, ensuring every citizen has the dignity of basic living standards.",
+    quote: "Rural India isn't invisible—it's just been measured wrong. LSI makes every village count.",
+    image: "/assets/ash.jpg"
+    links: { linkedin: "www.linkedin.com/in/amarnath-amarnath", instagram: "https://www.instagram.com/_ash_garo_/", email: "mailto:ash_amar@outlook.com" },
   },
 ];
 
@@ -47,11 +48,13 @@ const CoFounders = () => {
             >
               {/* Photo placeholder */}
               <div className="h-56 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 flex items-center justify-center relative overflow-hidden">
-                <div className="w-28 h-28 rounded-full bg-background/80 border-4 border-primary/20 flex items-center justify-center z-10">
-                  <span className="font-display text-3xl font-bold text-primary">
-                    {f.name.split(" ").map((w) => w[0]).join("")}
-                  </span>
-                </div>
+              <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-primary/20 bg-background/80 z-10">
+                <img
+                  src={f.image}
+                  alt={f.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
                 {/* Decorative blobs */}
                 <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-accent/10 blur-xl" />
                 <div className="absolute bottom-4 left-4 w-24 h-24 rounded-full bg-primary/10 blur-xl" />
