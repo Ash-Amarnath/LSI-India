@@ -20,16 +20,22 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-8 flex flex-col items-center gap-3"
         >
-          <img src={lsiLogo} alt="LSI - Living Standard of India Initiative" className="h-28 sm:h-36 mx-auto" />
+          <img src={lsiLogo} alt="LSI - Living Standards Initiative" className="h-28 sm:h-36" />
+          <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+            <span style={{ color: '#22c55e' }}>Living</span>{' '}
+            <span style={{ color: '#f97316' }}>Standards</span>{' '}
+            <span className="text-foreground">Initiative</span>
+          </h1>
+          <p className="text-muted-foreground text-base sm:text-lg font-medium tracking-wide">India Pilot</p>
         </motion.div>
 
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight leading-[1.1]"
+          className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight leading-[1.1]"
         >
           Mapping What <br />
           <span className="relative inline-block">
@@ -42,7 +48,7 @@ const HeroSection = () => {
             />
           </span>{" "}
           Forgets
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
