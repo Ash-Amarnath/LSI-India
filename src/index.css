@@ -1,0 +1,178 @@
+@import url('https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=satoshi@400,500,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 94%;
+    --foreground: 42 18% 10%;
+
+    --card: 42 40% 96%;
+    --card-foreground: 42 18% 10%;
+
+    --popover: 42 40% 96%;
+    --popover-foreground: 42 18% 10%;
+
+    --primary: 153 41% 30%;
+    --primary-foreground: 40 33% 94%;
+
+    --secondary: 40 25% 88%;
+    --secondary-foreground: 42 18% 10%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 40 12% 38%;
+
+    --accent: 24 72% 55%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 56% 39%;
+    --destructive-foreground: 40 33% 94%;
+
+    --border: 38 20% 78%;
+    --input: 38 20% 78%;
+    --ring: 153 41% 30%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 42 40% 96%;
+    --sidebar-foreground: 42 18% 10%;
+    --sidebar-primary: 153 41% 30%;
+    --sidebar-primary-foreground: 40 33% 94%;
+    --sidebar-accent: 40 25% 88%;
+    --sidebar-accent-foreground: 42 18% 10%;
+    --sidebar-border: 38 20% 78%;
+    --sidebar-ring: 153 41% 30%;
+
+    /* Custom tokens */
+    --surface: 42 50% 97%;
+    --surface-offset: 38 22% 86%;
+    --text-faint: 35 10% 60%;
+    --accent-highlight: 24 72% 90%;
+    --primary-highlight: 153 30% 82%;
+
+    --font-display: 'Boska', 'Georgia', serif;
+    --font-body: 'Satoshi', 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 30 14% 7%;
+    --foreground: 38 18% 78%;
+
+    --card: 30 14% 10%;
+    --card-foreground: 38 18% 78%;
+
+    --popover: 30 14% 10%;
+    --popover-foreground: 38 18% 78%;
+
+    --primary: 153 40% 52%;
+    --primary-foreground: 30 14% 7%;
+
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 38 18% 78%;
+
+    --muted: 30 10% 15%;
+    --muted-foreground: 35 12% 45%;
+
+    --accent: 24 95% 62%;
+    --accent-foreground: 30 14% 7%;
+
+    --destructive: 0 56% 39%;
+    --destructive-foreground: 38 18% 78%;
+
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 153 40% 52%;
+
+    --sidebar-background: 30 14% 10%;
+    --sidebar-foreground: 38 18% 78%;
+    --sidebar-primary: 153 40% 52%;
+    --sidebar-primary-foreground: 30 14% 7%;
+    --sidebar-accent: 30 10% 15%;
+    --sidebar-accent-foreground: 38 18% 78%;
+    --sidebar-border: 30 10% 18%;
+    --sidebar-ring: 153 40% 52%;
+
+    --surface: 30 14% 12%;
+    --surface-offset: 30 10% 15%;
+    --text-faint: 30 8% 32%;
+    --accent-highlight: 24 40% 20%;
+    --primary-highlight: 153 20% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: hsl(var(--accent));
+  z-index: 100;
+  transition: width 50ms linear;
+}
+
+/* Grain texture overlay */
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Pulsing dot */
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.6); opacity: 0.3; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Bounce chevron */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
