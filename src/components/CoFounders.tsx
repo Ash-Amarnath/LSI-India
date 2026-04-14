@@ -8,6 +8,7 @@ const founders = [
     role: "Co-Founder & Strategy Lead",
     bio: "Passionate about bridging India's data gap. With a background in public policy and grassroots organizing, they lead LSI's vision to make every village count — literally. Driven by the belief that visibility is the first step to change.",
     quote: "If we can see it, we can change it.",
+    image: "/assets/ash.jpg",
     links: { linkedin: "#", instagram: "#", email: "mailto:founder1@lsi.org" },
   },
   {
