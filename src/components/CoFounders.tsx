@@ -1,5 +1,5 @@
 import ashPhoto from "@/assets/ash.jpg";
-import hariPhoto from "@/assets/hari.jpg"
+import hariPhoto from "@/assets/hari.jpeg"
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { Linkedin, Mail, Instagram } from "lucide-react";
