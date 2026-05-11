@@ -1,16 +1,17 @@
 import ashPhoto from "@/assets/ash.jpg";
+import hariPhoto from "@/assets/hari.jpg"
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { Linkedin, Mail, Instagram } from "lucide-react";
 
 const founders = [
   {
-    name: "Co-Founder Name",
-    role: "Co-Founder & Strategy Lead",
-    bio: "Passionate about bridging India's data gap. With a background in public policy and grassroots organizing, they lead LSI's vision to make every village count — literally. Driven by the belief that visibility is the first step to change.",
+    name: "Hari",
+    role: "Co-Founder",
+    bio: "Data analyst, political economy writer and researcher motivated by a deep concern for global inequality and the conditions in which millions still live. This initiative reflects our vision to build a more honest and data-driven approach to development that reaches everyone, everywhere in our country",
     quote: "If we can see it, we can change it.",
-    image: "",
-    links: { linkedin: "#", instagram: "#", email: "mailto:founder1@lsi.org" },
+    image: hariPhoto,
+    links: { linkedin: "#", instagram: "https://www.instagram.com/_hkrishnan_ca/?hl=en", email: "mailto:founder1@lsi.org" },
   },
   {
     name: "Amarnath (Ash)",
