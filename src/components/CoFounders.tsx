@@ -11,7 +11,7 @@ const founders = [
     bio: "Data analyst, political economy writer and researcher motivated by a deep concern for global inequality and the conditions in which millions still live. This initiative reflects our vision to build a more honest and data-driven approach to development that reaches everyone, everywhere in our country",
     quote: "If we can see it, we can change it.",
     image: hariPhoto,
-    links: { linkedin: "#", instagram: "https://www.instagram.com/_hkrishnan_ca/?hl=en", email: "mailto:founder1@lsi.org" },
+    links: { linkedin: "https://www.linkedin.com/in/harikrishnan-analytics/", instagram: "https://www.instagram.com/_hkrishnan_ca/?hl=en", email: "mailto:harica696@gmail.com"},
   },
   {
     name: "Amarnath (Ash)",
